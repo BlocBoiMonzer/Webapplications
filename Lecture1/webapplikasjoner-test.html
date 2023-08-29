@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <h1>Super-advanced-text-printing-form</h1>
+    <form>
+      <label for="fname">Text to print:</label>
+      <input type="text" id="fname" name="fname"><br><br>
+    </form>
+    <button id='btn'>Print text</button>
+    <p class="output" id="output1"></p>
+  </body>
+  <script>
+
+    const text = document.getElementById("fname");
+    const btn = document.getElementById("btn");
+
+    const output = document.getElementById("output1");
+
+    function fun1(){
+    output.innerHTML = text.value;
+    }
+
+    btn.addEventListener("click", fun1);
+  </script>
+</html>
