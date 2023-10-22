@@ -8,7 +8,7 @@ const PostPage = () => {
 
   useEffect(() => {
     async function fetchPost() {
-      const postJson = await fs.promises.readFile(`/public/posts/${router.query.id}.json`, 'utf8');
+      const postJson = await fs.promises.readFile(`/api/posts/${router.query.id}.json`, 'utf8');
       const post = JSON.parse(postJson);
       setPost(post);
     }
